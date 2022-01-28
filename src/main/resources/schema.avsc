@@ -1,0 +1,92 @@
+{
+  "type": "record",
+  "name": "Customer",
+  "namespace": "com.github.alchash.avro",
+  "fields": [
+    {
+      "name": "Id",
+      "type": "string"
+    },
+    {
+      "name": "Name",
+      "type": "string"
+    },
+    {
+      "name": "Surname",
+      "type": "string"
+    },
+    {
+      "name": "Accounts",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "record",
+          "name": "Account",
+          "namespace": "com.github.alchash.avro",
+          "fields": [
+            {
+              "name": "AccountId",
+              "type": "int"
+            },
+            {
+              "name": "AccountType",
+              "type": "string"
+            },
+            {
+              "name": "InteractionGroups",
+              "type": {
+                "type": "array",
+                "items": {
+                  "type": "record",
+                  "name": "InteractionGroup",
+                  "namespace": "com.github.alchash.avro",
+                  "fields": [
+                    {
+                      "name": "Id",
+                      "type": "string"
+                    },
+                    {
+                      "name": "date",
+                      "type": "string"
+                    },
+                    {
+                      "name": "interactions",
+                      "type": {
+                        "type": "array",
+                        "items": {
+                          "type": "record",
+                          "name": "Interaction",
+                          "namespace": "com.github.alchash.avro",
+                          "fields": [
+                            {
+                              "name": "Id",
+                              "type": "string"
+                            },
+                            {
+                              "name": "type",
+                              "type": {
+                                "type": "enum",
+                                "name": "InteractionType",
+                                "namespace": "com.github.alchash.avro",
+                                "symbols": [
+                                  "WEBSITE",
+                                  "TWITTER",
+                                  "CALL",
+                                  "INSTAGRAM"
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
