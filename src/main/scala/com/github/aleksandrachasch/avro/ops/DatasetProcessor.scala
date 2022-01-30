@@ -4,7 +4,7 @@ import com.github.aleksandrachasch.avro.{Customer, ops}
 import org.apache.spark.sql.Dataset
 
 trait DataProcessor[T, C] {
-  def customFlatten(t: T): Seq[C]
+  def customerFlatten(t: T): Seq[C]
 }
 
 object DataProcessor {
@@ -12,15 +12,11 @@ object DataProcessor {
   def apply[T, C](implicit processor: DataProcessor[T, C]): DataProcessor[T, C] =
     processor
 
-  def instance[T, C](fun: T => Array[C]): DataProcessor[T, C] =
-    (t: T) => fun(t)
-
   implicit class DataProcessorOps[T, C](val t : T) extends AnyVal {
-    def customFlatten(implicit processor: DataProcessor[T, C]): Seq[C] = {
-      processor.customFlatten(t)
+    def customerFlatten(implicit processor: DataProcessor[T, C]): Seq[C] = {
+      processor.customerFlatten(t)
     }
   }
-
 }
 
 object CustomerDataProcessor {

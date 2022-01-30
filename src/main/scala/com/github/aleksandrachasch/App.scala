@@ -23,8 +23,8 @@ object App extends SparkSessionWrapper {
 
     ds.show(false)
 
-    val flattenedDs = ds.flatMap(_.customFlatten)
-    flattenedDs.show
+    val flattenedDs = ds.flatMap(_.customerFlatten)
+    flattenedDs.show(false)
   }
 
 }
