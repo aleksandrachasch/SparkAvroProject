@@ -1,4 +1,4 @@
-package com.github.alchash
+package com.github.aleksandrachasch
 
 import org.apache.spark.sql.SparkSession
 

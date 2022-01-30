@@ -1,6 +1,6 @@
-package com.github.alchash.avro.ops
+package com.github.aleksandrachasch.avro.ops
 
-import com.github.alchash.avro.{Customer, ops}
+import com.github.aleksandrachasch.avro.{Customer, ops}
 import org.apache.spark.sql.Dataset
 
 trait DataProcessor[T, C] {

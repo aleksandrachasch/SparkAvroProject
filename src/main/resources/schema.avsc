@@ -1,7 +1,7 @@
 {
   "type": "record",
   "name": "Customer",
-  "namespace": "com.github.alchash.avro",
+  "namespace": "com.github.aleksandrachasch.avro",
   "fields": [
     {
       "name": "Id",
@@ -22,7 +22,7 @@
         "items": {
           "type": "record",
           "name": "Account",
-          "namespace": "com.github.alchash.avro",
+          "namespace": "com.github.aleksandrachasch.avro",
           "fields": [
             {
               "name": "AccountId",
@@ -39,7 +39,7 @@
                 "items": {
                   "type": "record",
                   "name": "InteractionGroup",
-                  "namespace": "com.github.alchash.avro",
+                  "namespace": "com.github.aleksandrachasch.avro",
                   "fields": [
                     {
                       "name": "Id",
@@ -56,7 +56,7 @@
                         "items": {
                           "type": "record",
                           "name": "Interaction",
-                          "namespace": "com.github.alchash.avro",
+                          "namespace": "com.github.aleksandrachasch.avro",
                           "fields": [
                             {
                               "name": "Id",
@@ -67,7 +67,7 @@
                               "type": {
                                 "type": "enum",
                                 "name": "InteractionType",
-                                "namespace": "com.github.alchash.avro",
+                                "namespace": "com.github.aleksandrachasch.avro",
                                 "symbols": [
                                   "WEBSITE",
                                   "TWITTER",

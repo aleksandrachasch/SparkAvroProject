@@ -87,14 +87,11 @@
       <plugin>
         <groupId>at.makubi.maven.plugin</groupId>
         <artifactId>avrohugger-maven-plugin</artifactId>
-        <version>1.7</version>
+        <version>1.6</version>
         <configuration>
           <sourceDirectory>${basedir}/src/main/resources</sourceDirectory>
           <outputDirectory>${basedir}/src/main/scala</outputDirectory>
           <sourceGenerationFormat>STANDARD</sourceGenerationFormat>
-          <typeOverrides>
-            <enumType>SCALA_ENUMERATION</enumType>
-          </typeOverrides>
         </configuration>
         <executions>
           <execution>
